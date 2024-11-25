@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Usuários</title>
+    <link rel="stylesheet" href="../Styles/users.css">
+    <script defer src="../script/script-users.js"></script>
+    </head>
+    <body>
+    <header>
+        <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="users.html">Usuários</a></li>
+            <li><a href="products.html">Produtos</a></li>
+        </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Usuários</h1>
+        <form id="addUserForm">
+        <h2>Adicionar Usuário</h2>
+        <input type="text" id="firstName" placeholder="Nome" required minlength="3" maxlength="50">
+        <input type="text" id="lastName" placeholder="Sobrenome" required minlength="3" maxlength="50">
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="number" id="age" placeholder="Idade" required min="1" max="120">
+        <input type="url" id="image" placeholder="URL da Foto (opcional)">
+        <button type="submit">Adicionar</button>
+        </form>
+        <h2>Lista de Usuários</h2>
+        <ul id="userList"></ul>
+    </main>
+</body>
+</html>

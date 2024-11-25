@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Produtos</title>
+    <link rel="stylesheet" href="../Styles/products.css">
+    <script defer src="../script/script-products.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="users.html">Usuários</a></li>
+                <li><a href="products.html">Produtos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Gerenciamento de Produtos</h1>
+        <form id="addProductForm">
+            <h2>Adicionar Produto</h2>
+            <input type="text" id="title" placeholder="Título" required minlength="3" maxlength="50">
+            <textarea id="description" placeholder="Descrição" required minlength="3" maxlength="100"></textarea>
+            <input type="number" id="price" placeholder="Preço" required min="1">
+            <input type="text" id="brand" placeholder="Marca" required minlength="3" maxlength="50">
+            <input type="text" id="category" placeholder="Categoria" required minlength="3" maxlength="50">
+            <input type="url" id="thumbnail" placeholder="URL da Foto (opcional)">
+            <button type="submit">Adicionar</button>
+        </form>
+        <h2>Lista de Produtos</h2>
+        <ul id="productList">
+            <!-- Produtos serão carregados aqui via JavaScript -->
+        </ul>
+    </main>
+</body>
+</html>
