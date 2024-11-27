@@ -122,7 +122,7 @@ button:hover {
     margin: 20px auto;
     max-width: 1000px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajuste do grid para colunas dinâmicas */
     gap: 20px;
     padding: 20px;
     box-sizing: border-box;
@@ -142,10 +142,11 @@ button:hover {
     gap: 10px;
 }
 
-/* Imagem do produto */
+/* Imagem do produto - Tamanho maior */
 .product-item-img {
     width: 100%;
-    height: auto;
+    height: 250px;  /* Tamanho fixo da imagem */
+    object-fit: cover;  /* Ajusta para cobrir o espaço sem distorcer */
     border-radius: 8px;
 }
 
@@ -158,6 +159,7 @@ button:hover {
 .product-item p {
     font-size: 0.9rem;
     margin: 5px 0;
+    text-align: center;  /* Garante que a descrição fique centralizada */
 }
 
 /* Botão Remover */
@@ -193,10 +195,14 @@ button:hover {
     }
 
     #productList {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr;  /* Exibição em uma única coluna em telas menores */
     }
 
     .product-item {
         padding: 10px;
+    }
+
+    .product-item-img {
+        height: 200px;  /* Ajusta o tamanho da imagem em telas menores */
     }
 }
