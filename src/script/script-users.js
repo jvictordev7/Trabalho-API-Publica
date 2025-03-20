@@ -45,7 +45,7 @@ function addUser(event) {
   };
 
   // Simular a adição do usuário
-  alert('Usuário adicionado (simulado)!');
+  alert('Usuário adicionado com sucesso!');
   localUserList.push(newUser); // Adicionar o novo usuário localmente
   displayUsers(); // Atualizar a lista de usuários
 }
@@ -55,7 +55,7 @@ function deleteUser(userId) {
   // Remover usuário da lista local
   localUserList = localUserList.filter(user => user.id !== userId);
   
-  alert('Usuário removido (simulado)!');
+  alert('Usuário removido com sucesso!');
   displayUsers(); // Atualizar a lista de usuários na interface
 }
 

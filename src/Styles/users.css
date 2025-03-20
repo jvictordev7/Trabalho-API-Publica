@@ -84,6 +84,23 @@ nav a:hover {
     transition: all 0.3s ease;
 }
 
+/* Rodapé */
+footer {
+    background-color: #4B0082; /* Roxo */
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1em 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     header h1 {
