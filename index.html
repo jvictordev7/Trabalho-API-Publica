@@ -6,15 +6,22 @@
     <link rel="shortcut icon" href="image/favicon.png" type="image/x-icon">
     <title>Loja de Produtos Diversos</title>
     <link rel="stylesheet" href="src/Styles/index.css">
-    </head>
-    <body>
+</head>
+<body>
     <header>
-        <nav>
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="src/pages/users.html">Usuários</a></li>
-            <li><a href="src/pages/products.html">Produtos</a></li>
-        </ul>
+        <div class="header-content">
+            <button class="hamburger" aria-label="Abrir menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="src/pages/users.html">Usuários</a></li>
+                <li><a href="src/pages/products.html">Produtos</a></li>
+            </ul>
         </nav>
     </header>
     <main>
@@ -25,5 +32,18 @@
     <footer>
         <p>&copy; 2024 Loja de Produtos Diversos</p>
     </footer>
-    </body>
-    </html>
+
+    <script>
+        // JavaScript para controlar o menu hambúrguer
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+
+            hamburger.addEventListener('click', function () {
+                navMenu.classList.toggle('active'); // Alterna a visibilidade do menu
+                hamburger.classList.toggle('active'); // Alterna a animação do ícone
+            });
+        });
+    </script>
+</body>
+</html>
