@@ -2,6 +2,9 @@
 
 Este projeto é um consumo da **API Dummy JSON** para exibir, adicionar e remover dados fictícios. O principal objetivo é demonstrar habilidades de integração com APIs RESTful, manipulação de dados no frontend e operações de CRUD.
 
+![Imagem do Projeto]([https://exemplo.com/imagem.png](https://i.imgur.com/tLfK5OK_d.webp?maxwidth=760&fidelity=grand))
+---
+
 ## 🔗 Acesse o projeto online
 [Trabalho API Pública](https://jvictordev7.github.io/Trabalho-API-Publica/)
 
