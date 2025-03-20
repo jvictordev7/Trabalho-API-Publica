@@ -10,7 +10,15 @@
 </head>
 <body>
     <header>
-        <nav>
+        <div class="header-content">
+            <button class="hamburger" aria-label="Abrir menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+
+        <nav class="nav-menu">
             <ul>
                 <li><a href="../../index.html">Início</a></li>
                 <li><a href="users.html">Usuários</a></li>
@@ -18,6 +26,7 @@
             </ul>
         </nav>
     </header>
+
     <main>
         <h1>Usuários</h1>
         <form id="addUserForm" onsubmit="addUser(event)">
@@ -33,5 +42,17 @@
         <h2>Lista de Usuários</h2>
         <ul id="userList"></ul>
     </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+
+            hamburger.addEventListener('click', function () {
+                navMenu.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>

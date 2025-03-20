@@ -6,11 +6,19 @@
     <link rel="shortcut icon" href="../../image/favicon.png" type="image/x-icon">
     <title>Gerenciamento de Produtos</title>
     <link rel="stylesheet" href="../Styles/products.css">
+    <link rel="stylesheet" href="../../src/Styles/index.css"> <!-- Estilo do menu hambúrguer -->
     <script defer src="../script/script-products.js"></script>
 </head>
 <body>
     <header>
-        <nav>
+        <div class="header-content">
+            <button class="hamburger" aria-label="Abrir menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+        <nav class="nav-menu">
             <ul>
                 <li><a href="../../index.html">Início</a></li>
                 <li><a href="users.html">Usuários</a></li>
@@ -32,8 +40,20 @@
         </form>
         <h2>Lista de Produtos</h2>
         <ul id="productList">
-            <!-- Produtos serão carregados aqui via JavaScript -->
+            <!-- Produtos carregados via JavaScript -->
         </ul>
     </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+
+            hamburger.addEventListener('click', function () {
+                navMenu.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>

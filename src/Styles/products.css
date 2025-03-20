@@ -1,5 +1,5 @@
 /* Estilo geral */
-body {
+body, html {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
@@ -9,6 +9,9 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Garante que o gradiente ocupe toda a altura da tela */
+    overflow-x: hidden;
 }
 
 /* Cabeçalho */
@@ -24,14 +27,6 @@ header h1 {
     font-size: 2.5rem;
     margin: 0;
     font-weight: bold;
-}
-
-h1 {
-    text-align: center;
-}
-
-h2 {
-    text-align: center;
 }
 
 /* Navegação */
@@ -75,13 +70,6 @@ form {
     align-items: center;
 }
 
-form h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 1.5rem;
-    color: #FFFFFF;
-}
-
 input, textarea {
     background-color: #FFFFFF;
     color: #000000;
@@ -92,11 +80,6 @@ input, textarea {
     margin-bottom: 15px;
     width: 100%;
     box-sizing: border-box;
-}
-
-input:focus, textarea:focus {
-    border-color: #32CD32;
-    outline: none;
 }
 
 button {
@@ -113,7 +96,6 @@ button {
 }
 
 button:hover {
-    background-color: #228B22;
     transform: scale(1.05);
 }
 
@@ -122,13 +104,12 @@ button:hover {
     margin: 20px auto;
     max-width: 1000px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajuste do grid para colunas dinâmicas */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
     box-sizing: border-box;
 }
 
-/* Cartão de Produto */
 .product-item {
     background-color: rgba(75, 0, 130, 0.8);
     padding: 15px;
@@ -140,46 +121,6 @@ button:hover {
     flex-direction: column;
     align-items: center;
     gap: 10px;
-}
-
-/* Imagem do produto - Tamanho maior */
-.product-item-img {
-    width: 100%;
-    height: 250px;  /* Tamanho fixo da imagem */
-    object-fit: cover;  /* Ajusta para cobrir o espaço sem distorcer */
-    border-radius: 8px;
-}
-
-/* Nome e descrição do produto */
-.product-item h3 {
-    font-size: 1.2rem;
-    margin: 10px 0;
-}
-
-.product-item p {
-    font-size: 0.9rem;
-    margin: 5px 0;
-    text-align: center;  /* Garante que a descrição fique centralizada */
-}
-
-/* Botão Remover */
-.remove-button {
-    background-color: #FF0000;
-    color: #FFFFFF;
-    font-size: 1rem;
-    padding: 8px 12px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.remove-button:hover {
-    background-color: #B22222;
-    transform: scale(1.1);
-}
-
-.remove-button:focus {
-    outline: none;
 }
 
 /* Responsividade */
@@ -195,14 +136,10 @@ button:hover {
     }
 
     #productList {
-        grid-template-columns: 1fr;  /* Exibição em uma única coluna em telas menores */
+        grid-template-columns: 1fr;
     }
 
-    .product-item {
+    form, .product-item {
         padding: 10px;
-    }
-
-    .product-item-img {
-        height: 200px;  /* Ajusta o tamanho da imagem em telas menores */
     }
 }
