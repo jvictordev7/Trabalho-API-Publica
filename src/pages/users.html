@@ -7,6 +7,7 @@
     <title>Gerenciamento de Usuários</title>
     <link rel="stylesheet" href="../Styles/users.css">
     <script defer src="../script/script-users.js"></script>
+    
 </head>
 <body>
     <header>
@@ -27,6 +28,9 @@
         </nav>
     </header>
 
+    <!-- Alerta Personalizada -->
+    <div id="customAlert" class="custom-alert"></div>
+
     <main>
         <h1>Usuários</h1>
         <form id="addUserForm" onsubmit="addUser(event)">
@@ -46,17 +50,5 @@
     <footer>
         <p>&copy; 2025 Loja de Produtos Diversos</p>
     </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const hamburger = document.querySelector('.hamburger');
-            const navMenu = document.querySelector('.nav-menu');
-
-            hamburger.addEventListener('click', function () {
-                navMenu.classList.toggle('active');
-                hamburger.classList.toggle('active');
-            });
-        });
-    </script>
 </body>
 </html>
